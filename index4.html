@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамічно сформована сторінка</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .styled-text {
+            font-size: 18px;
+            color: red;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .styled-text:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+        "use strict";
+        document.write("<p>Початок сторінки</p>"); 
+        document.write("<h1>Заголовок</h1>"); 
+        document.write('<p class="styled-text" id="styleText">Стилі</p>');
+        document.write("<p>Кінець моєї сторінки</p>");
+
+        // Зміна стилів після кліку
+        const styleText = document.getElementById('styleText');
+        styleText.addEventListener('click', function() {
+            this.style.fontSize = '24px';
+            this.style.fontWeight = 'bold';
+            this.style.fontFamily = 'Courier New';
+            this.style.color = 'green';
+        });
+    </script>
+</body>
+</html>
